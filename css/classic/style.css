@@ -1,0 +1,103 @@
+body{
+    background-color: #b58863;
+}
+
+nav{
+    background-color: #f0d9b5;
+    margin-top: 0px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+
+    nav{
+        margin-top: 20px;
+    }
+
+}
+
+.big-title{
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: none;
+    color: #383531;
+}
+
+.big-title-span{
+    color: #383531;
+    font-weight: bold;
+}
+
+.top-10{
+    background-color: #f0d9b5;
+    padding: 20px;
+    color: #383531;
+}
+
+.top-10 table{
+    color: #383531;
+    border-bottom: 1px solid #383531;
+}
+
+@media (max-width: 576px) {
+
+    .top-10{
+        margin-top: 20px;
+    }
+
+}
+
+.most-reading{
+    margin-top: 20px;
+    background-color: #f0d9b5;
+    color: #383531;
+}
+
+.most-reading h4{
+    padding: 20px 20px 5px;
+}
+
+.most-reading-list{
+    padding: 0;
+}
+
+.most-reading-list li{
+    list-style: none;
+}
+
+.most-reading-list li a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    background-color: #f0d9b5;
+    padding: 10px 20px 10px;
+    color: #383531;
+}
+
+.most-reading-list li a:hover{
+    background-color: #b58863;
+    color: #fff;
+    transition: background-color 0.5s ease;
+}
+
+.one-cikan{
+    background-color: #f0d9b5;
+    padding: 20px;
+}
+
+.author{
+    text-align: right;
+}
+
+.articles{
+    margin-top: 20px;
+}
+
+.article{
+    background-color: #f0d9b5;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
