@@ -8,16 +8,13 @@
             <th>Rating</th>
             </thead>
             <tbody>
+            <?php for($i=0; $i<=$fideRatingBot->length-1; $i++): ?>
             <tr>
-                <td>1</td>
-                <td>Magnus Carlsen</td>
-                <td>2859</td>
+                <td><?php echo $i+1; ?></td>
+                <td><?php echo $fideRatingBot->names[$i]; ?></td>
+                <td><?php echo $fideRatingBot->ratings[$i]; ?></td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Ding Liren</td>
-                <td>2796</td>
-            </tr>
+            <?php endfor; ?>
             </tbody>
         </table>
     </aside>
