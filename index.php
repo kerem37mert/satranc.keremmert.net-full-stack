@@ -1,5 +1,10 @@
 <?php
 require_once("general.php");
+require_once("php/contents.php");
+
+$contents = new \satranc\contents();
+$contents->selectIndex();
+
 ?>
 <!doctype html>
 <html lang="tr">
@@ -24,21 +29,13 @@ require_once("general.php");
                     <em class="author">Magnus Carlsen</em>
                 </section>
                 <section class="articles">
+                    <?php foreach ($contents->data as $data): ?>
                     <article class="article">
-                        <h3>Başlık</h3>
+                        <h3><a href="/blog/<?php echo $data["id"]; ?>"><?php echo $data["title"]; ?></a></h3>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci culpa, cupiditate enim est, expedita ipsa itaque libero maiores nisi nulla quo. Excepturi, praesentium, quis?</p>
+                        <p><?php echo $data["description"] ?></p>
                     </article>
-                    <article class="article">
-                        <h3>Başlık</h3>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci culpa, cupiditate enim est, expedita ipsa itaque libero maiores nisi nulla quo. Excepturi, praesentium, quis?</p>
-                    </article>
-                    <article class="article">
-                        <h3>Başlık</h3>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci culpa, cupiditate enim est, expedita ipsa itaque libero maiores nisi nulla quo. Excepturi, praesentium, quis?</p>
-                    </article>
+                    <?php endforeach; ?>
                 </section>
             </div>
             <?php require_once("footer.php"); ?>

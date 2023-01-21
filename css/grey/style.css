@@ -29,3 +29,89 @@ nav{
     color: #000;
     font-weight: bold;
 }
+
+.top-10{
+    background-color: #a9a9a9;
+    padding: 20px;
+    color: #000;
+}
+
+.top-10 table{
+    color: #000;
+    border-bottom: 1px solid #878787;
+}
+
+@media (max-width: 576px) {
+
+    .top-10{
+        margin-top: 20px;
+    }
+
+}
+
+.most-reading{
+    margin-top: 20px;
+    background-color: #a9a9a9;
+    color: #000;
+}
+
+.most-reading h4{
+    padding: 20px 20px 5px;
+}
+
+.most-reading-list{
+    padding: 0;
+}
+
+.most-reading-list li{
+    list-style: none;
+}
+
+.most-reading-list li a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    background-color: #a9a9a9;
+    padding: 10px 20px 10px;
+    color: #000;
+}
+
+.most-reading-list li a:hover{
+    background-color: #878787;
+    color: #fff;
+    transition: background-color 0.5s ease;
+}
+
+.one-cikan{
+    background-color: #a9a9a9;
+    padding: 20px;
+}
+
+.author{
+    text-align: right;
+}
+
+.articles{
+    margin-top: 20px;
+}
+
+.article{
+    background-color: #a9a9a9;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+footer{
+    background-color: #e0dcd7;
+    color: #393632;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+
+.an-article{
+    text-align: justify;
+    padding: 30px;
+}
