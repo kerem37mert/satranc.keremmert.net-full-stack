@@ -21,15 +21,11 @@
     <aside class="most-reading">
         <h4 class="text-center">En çok Okunanlar</h4>
         <ul class="most-reading-list">
+            <?php foreach($contentsV->data as $data): ?>
             <li>
-                <a href="">Fedasız Satranç</a>
+                <a href="/blog/<?php echo $data["id"];?>"><?php echo $data["title"]; ?></a>
             </li>
-            <li>
-                <a href="">Fedasız Satranç</a>
-            </li>
-            <li>
-                <a href="">Fedasız Satranç</a>
-            </li>
+            <?php endforeach; ?>
         </ul>
     </aside>
 </div>

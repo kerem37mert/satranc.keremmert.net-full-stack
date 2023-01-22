@@ -1,9 +1,12 @@
 <?php
 require_once("general.php");
-require_once("php/contents.php");
+require_once ("php/featured.php");
 
 $contents = new \satranc\contents();
 $contents->selectIndex();
+
+$featured = new \satranc\featured();
+$featured->select();
 
 ?>
 <!doctype html>
@@ -24,9 +27,9 @@ $contents->selectIndex();
         <div class="row">
             <div class="col-md-8">
                 <section class="one-cikan">
-                    "Hafif Üstün Oyun Sonu Kazanılır"
+                    "<?php echo $featured->text; ?>"
                     <br>
-                    <em class="author">Magnus Carlsen</em>
+                    <em class="author"><?php echo $featured->author; ?></em>
                 </section>
                 <section class="articles">
                     <?php foreach ($contents->data as $data): ?>

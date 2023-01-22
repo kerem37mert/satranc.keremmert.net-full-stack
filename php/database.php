@@ -8,6 +8,7 @@ class database
     private string $dbname = "satranc";
     private string $username = "root";
     private string $password = "";
+    public int $rowcount;
     public $pdo = null;
     public $stmt = null;
 
@@ -34,6 +35,8 @@ class database
                 $this->stmt->execute($params);
             endif;
 
+            $this->rowcount = $this->stmt->rowCount();
+
             return $this->stmt->fetchALl();
         }
         catch(\PDOException $e)
@@ -52,6 +55,8 @@ class database
                 $this->stmt = $this->pdo->prepare($query);
                 $this->stmt->execute($params);
             endif;
+
+            $this->rowcount = $this->stmt->rowCount();
 
             return $this->stmt->fetch();
         }
